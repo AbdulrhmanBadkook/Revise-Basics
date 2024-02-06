@@ -135,7 +135,7 @@ public:
 
 
    }
-   static string  Encrypt_text(string Text, short EncryptionKey)
+   static string  Encrypt_text(string Text, short EncryptionKey=2)
    {
 
        for (int i = 0; i <= Text.length(); i++)
@@ -149,13 +149,13 @@ public:
 
    }
 
-   static string  Decrypt_text(string Text, short EncryptionKey)
+   static string  Decrypt_text(string Text, short DecryptionKey=2)
    {
 
        for (int i = 0; i <= Text.length(); i++)
        {
 
-           Text[i] = char((int)Text[i] - EncryptionKey);
+           Text[i] = char((int)Text[i] - DecryptionKey);
 
        }
        return Text;
